@@ -1,0 +1,24 @@
+<div class="container-fluid outer-box">
+  <div class="container inner-box">
+    <h1 class="display-4 text-center">DASHBOARD</h1>
+    <div class="text-muted font-weight-bold mt-4">Roll No</div>
+    <input type="text" class="p-2 normal-input" (keyup)="writeRollNo($event)" />
+    <div class="text-danger" id="rollno">invalid roll no</div>
+
+    <div class="text-muted font-weight-bold mt-4">Email</div>
+    <input
+      type="email"
+      class="p-2 normal-input"
+      (keyup)="writeEmail($event)"
+    />
+    <div class="text-danger" id="email">email not correct</div>
+
+    <button type="button" class="login-button mt-4" (click)="login()">
+      Get Marks
+    </button>
+  </div>
+</div>
+
+<div class="container-fluid text-right p-3 bg-light">
+    <a href="/add-data" class="btn btn-dark">Add Data</a>
+</div>
