@@ -1,1 +1,47 @@
-<p>add-data works!</p>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-xl-3"></div>
+    <div class="col-xl-6">
+      <div class="p-5 border">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            (keyup)="enterRollNo($event)"
+            placeholder="rollno"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            (keyup)="enterEmail($event)"
+            placeholder="email"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            (keyup)="enterMarks($event)"
+            placeholder="marks"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            (keyup)="enterAttendance($event)"
+            placeholder="attendance"
+          />
+        </div>
+        <button type="button" class="btn btn-info" (click)="upload()">Upload</button>
+      </div>
+    </div>
+    <div class="col-xl-3"></div>
+  </div>
+</div>
+
+<div class="container-fluid text-right bg-light p-5" style="position: absolute; bottom: 0px;">
+  <button type="button" class="btn btn-info" (click)="logout()">Logout</button>
+</div>

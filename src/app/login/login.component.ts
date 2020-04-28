@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-login",
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
   rollNo;
   email;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private router: Router) {}
 
   ngOnInit() {}
 
@@ -67,6 +68,19 @@ export class LoginComponent implements OnInit {
           alert("Marks sent to mail");
         });
       }
+    }
+  }
+
+  checkAuth(){
+    const pass="Rishabh123@";
+    let passInput=prompt("Enter password : ");
+
+    if(passInput == pass){
+      localStorage.setItem('auth','true');
+      this.router.navigate(['/add-data']);
+    }
+    else{
+      alert("Wrong passkey");
     }
   }
 }
